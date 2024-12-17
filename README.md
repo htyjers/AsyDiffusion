@@ -1,7 +1,5 @@
 # AsyDiffusion
 
-This repository is the official code for the paper "Escaping from Resampling over Diffusion Models for Image Inpainting: Asymmetric Diffusion Process and Consistent Structure-Texture Correlation" by Biao Qian, Yang Wang, Haipeng Liu, Hongzhi Yin, Yong Rui, Meng Wang.
-
 
 #
 ## Dependencies
@@ -48,7 +46,7 @@ Python3 ./train/texture/config/inpainting/train.py
      
 2. Pre-trained models:
    
-   Download the pre-trained model of , then get into the `AsyDiffusion/test/texture` directory and modify the model paths in option files in `/config/inpainting/options/test/ir-sde.yml`
+   Download the pre-trained model, then get into the `AsyDiffusion/test/texture` directory and modify the model paths in option files in `/config/inpainting/options/test/ir-sde.yml`
    * *You can set the path of Texture Denoising Model in [here](https://github.com/htyjers/StrDiffusion/blob/5749a214bb39754be165fa2bf76f96f13bc3e4a3/test/texture/config/inpainting/options/test/ir-sde.yml#L44)*
    * *You can set the path of Structure Denoising Model in [here](https://github.com/htyjers/StrDiffusion/blob/5749a214bb39754be165fa2bf76f96f13bc3e4a3/test/texture/config/inpainting/options/test/ir-sde.yml#L45)*
     
@@ -56,4 +54,18 @@ Python3 ./train/texture/config/inpainting/train.py
 ```
 Python3 ./test/texture/config/inpainting/test.py
 ```
+
+#
+## Example Results
+
+- Ablation study about the affect of resampling strategy under varied mask on the PSV dataset. The best results are
+in red, and the second-best results are in blue. The results show our AsyDiffusion with neither resampling nor discriminator
+outperforms the existing resampling models by merely resorting to diffusion model for image inpainting.
+
+![](pic/image2.png)
+
+
+- Visual comparison between our method and the competitors.
+
+![](pic/image1.png)
 
