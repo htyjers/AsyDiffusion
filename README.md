@@ -58,11 +58,14 @@ Python3 ./test/texture/config/inpainting/test.py
 #
 ## Example Results
 
-- Ablation study about the affect of resampling strategy under varied mask on the PSV dataset. The best results are
-in red, and the second-best results are in blue. The results show our AsyDiffusion with neither resampling nor discriminator
-outperforms the existing resampling models by merely resorting to diffusion model for image inpainting.
+- Ablation study about the affect of resampling strategy under varied mask on the PSV dataset. The best results are in red, and the second-best results are in blue. The results show our AsyDiffusion with neither resampling nor discriminator outperforms the existing resampling models by merely resorting to diffusion model for image inpainting.
 
 ![](pic/image2.png)
+
+
+- Illustration of the motivating experiments about how to develop the model that focuses on the diffusion model to address the discrepancy of structure-texture correlation between masked and unmasked regions
+
+![](pic/image3.png)
 
 
 - Visual comparison between our method and the competitors.
